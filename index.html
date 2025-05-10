@@ -7,17 +7,15 @@
   <title>Movie Seat Booking</title>
 </head>
 <body>
-  <script src="script.js"></script>
-
   <main class="flex movie-wrapper">
     <div class="flex movie-container">
       <div class="flex movie-pick">
         <label for="movies">Pick a movie:</label>
         <select name="movies" id="movies">
-          <option value="tham-tu-kien">Tham Tu Kien ($5)</option>
-          <option value="lat-mat-8">Lat mat 8 ($10)</option>
-          <option value="avenger">Avengers ($15)</option>
-          <option value="spider-man">Spider man ($17)</option>
+          <option value="5">Tham Tu Kien ($5)</option>
+          <option value="10">Lat mat 8 ($10)</option>
+          <option value="15">Avengers ($15)</option>
+          <option value="17">Spider man ($17)</option>
         </select>
       </div>
 
@@ -109,9 +107,10 @@
         You have selected
         <span id="count">0</span>
         <span class="seat-word">seat</span>
-        for a price of $<span class="price">0</span>
+        for a price of $<span id="price">0</span>
       </p>
     </div>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
