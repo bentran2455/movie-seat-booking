@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #242333;
+  color: white;
+  margin: 0;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.movie-container {
+  flex-direction: column;
+}
+.movie-wrapper {
+  height: 100%;
+  align-items: center;
+}
+
+.movie-pick {
+  gap: 1em;
+}
+
+.movie-pick select {
+    border: 0;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0 10px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.seat-status {
+  list-style-image: none;
+  gap: 1em;
+  padding: 5px 0;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.seat-container {
+  perspective: 1000px;
+}
+
+.seat {
+  background-color: #444451;
+  width: 15px;
+  height: 12px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+ul.seat-status .seat {
+  cursor: default;
+  transform: scale(1);
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+.seat.selected {
+  background-color: #6feaf6;
+}
+.seat.occupied {
+  background-color: white;
+  cursor: no-drop;
+}
+
+.screen {
+  background-color: white;
+  height: 70px;
+  width: 90%;
+  margin: 0 auto 1em;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text span:not(.seat-word) {
+  color: #6feaf6;
+}
